@@ -43,6 +43,7 @@
             text-align: center;
         }
         .slide-content {
+            min-height: 550px;
             flex-grow: 1;
             display: flex;
             flex-direction: column;
@@ -98,10 +99,15 @@
             background-color: #9ca3af; /* gray-400 */
             cursor: not-allowed;
         }
-        .slide img {
-            background-color: #e2e8f0; 
-            border-radius: 8px; 
+        .slide-image {
+            max-width: 300px; 
+            max-height: 300px;
+            width: 100%; 
+            height: auto;
             object-fit: contain;
+            background-color: #e2e8f0; 
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
         }
 
         @media (max-width: 640px) {
@@ -133,7 +139,7 @@
         <!-- Diapositiva 1: Título -->
         <div class="slide bg-gradient-to-br from-emerald-50 to-white">
             <div class="slide-content">
-                <img src="imagen1.jpg" alt="Ilustración de un cerebro humano superpuesto con un perfil humano." class="w-20 h-20 mb-4 text-emerald-500">
+                <img src="imagen1.jpg" alt="Ilustración de un cerebro humano superpuesto con un perfil humano."  text-emerald-500">
                 <h1 class="text-5xl text-gray-900 font-extrabold">Neurobiología y Ética</h1>
                 <h2 class="text-2xl text-emerald-700 font-semibold mt-2">La Base Científica de la Intervención Psicológica</h2>
                 <p class="text-gray-500 mt-4 italic">Análisis del Incidente Crítico sobre Pseudociencias en Neurodesarrollo Infantil</p>
@@ -152,7 +158,7 @@
                     <li>Meta: Fortalecer el pensamiento crítico y la práctica informada en psicología.</li>
                 </ul>
             </div>
-            <img src="imagen2.jpg" alt="Un documento o informe y un lápiz, simbolizando planificación y objetivos." class="w-12 h-12 text-blue-500">
+            <img src="imagen2.jpg" alt="Un documento o informe y un lápiz, simbolizando planificación y objetivos." text-blue-500">
         </div>
 
         <!-- Diapositiva 3: El Incidente Crítico -->
@@ -165,7 +171,7 @@
                     <li>Rol: Proponer estrategias informadas y éticas como psicólogo en formación.</li>
                 </ul>
             </div>
-            <img src="imagen3.jpg" alt="Señal de advertencia triangular con un signo de exclamación." class="w-12 h-12 text-red-500">
+            <img src="imagen3.jpg" alt="Señal de advertencia triangular con un signo de exclamación." text-red-500">
         </div>
 
         <!-- Diapositiva 4: Riesgos de la Pseudociencia -->
@@ -179,7 +185,7 @@
                     <li>Riesgo 4: Intervenciones Invasivas: Aplicación de métodos peligrosos o ineficaces.</li>
                 </ul>
             </div>
-            <img src="imagen4.jpg" alt="Reloj con manecillas rotas, simbolizando tiempo de desarrollo perdido." class="w-12 h-12 text-gray-500"> <!-- Icono de reloj (tiempo perdido) -->
+            <img src="imagen4.jpg" alt="Reloj con manecillas rotas, simbolizando tiempo de desarrollo perdido." text-gray-500"> <!-- Icono de reloj (tiempo perdido) -->
         </div>
 
         <!-- Diapositiva 5: Células Gliales (M2) -->
@@ -192,7 +198,7 @@
                     <li>Conexión con el Problema: Deficiencias en el soporte glial pueden estar relacionadas con algunos trastornos del neurodesarrollo.</li>
                 </ul>
             </div>
-            <img src="imagen5.jpg" alt="Esquema simple de una célula glial (Oligodendrocito) envolviendo un axón." class="w-16 h-16 text-emerald-500"> <!-- Imagen de Célula Glial -->
+            <img src="imagen5.jpg" alt="Esquema simple de una célula glial (Oligodendrocito) envolviendo un axón." text-emerald-500"> <!-- Imagen de Célula Glial -->
         </div>
 
         <!-- Diapositiva 6: Comunicación Sináptica (M3) -->
@@ -205,7 +211,7 @@
                     <li>Conexión con el Problema: Las intervenciones científicas buscan modular circuitos sinápticos específicos (farmacológicas o conductuales).</li>
                 </ul>
             </div>
-            <img src="imagen6.jpg" alt="Ilustración de una sinapsis neuronal con vesículas liberando neurotransmisores." class="w-16 h-16 text-yellow-500"> <!-- Imagen de Sinapsis -->
+            <img src="imagen6.jpg" alt="Ilustración de una sinapsis neuronal con vesículas liberando neurotransmisores." text-yellow-500"> <!-- Imagen de Sinapsis -->
         </div>
 
         <!-- Diapositiva 7: Regiones Cerebrales (M4) -->
@@ -218,7 +224,7 @@
                     <li>Conexión con el Problema: El psicólogo diseña estrategias conductuales para modificar las funciones de la CPF (ej. TCC).</li>
                 </ul>
             </div>
-            <img src="imagen7.jpg" alt="Diagrama de un cerebro humano resaltando la Corteza Prefrontal." class="w-16 h-16 text-purple-500"> <!-- Imagen de CPF -->
+            <img src="imagen7.jpg" alt="Diagrama de un cerebro humano resaltando la Corteza Prefrontal." text-purple-500"> <!-- Imagen de CPF -->
         </div>
 
         <!-- Diapositiva 8: Ejemplos de Prácticas -->
@@ -236,7 +242,7 @@
                     <li>Terapia Cognitivo-Conductual (TCC).</li>
                 </ul>
             </div>
-            <img src="imagen8.jpg" alt="Balanza comparando un lado con evidencia (ciencia) y otro sin evidencia (pseudociencia)." class="w-12 h-12 text-gray-700"> <!-- Imagen de Balanza -->
+            <img src="imagen8.jpg" alt="Balanza comparando un lado con evidencia (ciencia) y otro sin evidencia (pseudociencia)." text-gray-700"> <!-- Imagen de Balanza -->
         </div>
 
         <!-- Diapositiva 9: Diferenciación de Enfoques -->
@@ -249,7 +255,7 @@
                     <li>Criterio de Validez: Una intervención es válida si demuestra eficacia en ensayos clínicos controlados.</li>
                 </ul>
             </div>
-            <img src="imagen9.jpg" alt="Un gráfico de barras con resultados medibles, simbolizando evidencia científica." class="w-12 h-12 text-blue-700"> <!-- Imagen de Gráfico/Datos -->
+            <img src="imagen9.jpg" alt="Un gráfico de barras con resultados medibles, simbolizando evidencia científica." text-blue-700"> <!-- Imagen de Gráfico/Datos -->
         </div>
 
         <!-- Diapositiva 10: Conclusiones y Ética -->
@@ -262,7 +268,7 @@
                     <li>Reflexión Final: La neurobiología es el cimiento de nuestra credibilidad profesional y clínica.</li>
                 </ul>
             </div>
-            <img src="imagen10.jpg" alt="Una brújula o un mapa señalando la dirección ética y científica." class="w-12 h-12 text-yellow-700"> <!-- Imagen de Brújula -->
+            <img src="imagen10.jpg" alt="Una brújula o un mapa señalando la dirección ética y científica." text-yellow-700"> <!-- Imagen de Brújula -->
         </div>
 
         <!-- Diapositiva 11: Referencias -->
@@ -276,7 +282,7 @@
                     <li class="text-gray-600 text-left italic">Bunge, M. (2013). La ciencia: Su método y su filosofía. Editorial Sudamericana. https://posgrado.unam.mx/musica/lecturas/LecturaIntroduccionInvestigacionMusical/epistemologia/Mario-Bunge-la-Ciencia-su-Metodo-y-Filosofia.pdf.</li>
                 </ul>
             </div>
-            <img src="imagen11.jpg" alt="Pila de libros o una biblioteca, representando las fuentes académicas." class="w-12 h-12 text-gray-500"> <!-- Imagen de Libros/Referencias -->
+            <img src="imagen11.jpg" alt="Pila de libros o una biblioteca, representando las fuentes académicas." text-gray-500"> <!-- Imagen de Libros/Referencias -->
         </div>
         
     </div>

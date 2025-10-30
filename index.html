@@ -20,9 +20,7 @@
         .slide-container {
             width: 100%;
             max-width: 900px;
-            /* Se elimina altura fija (600px) para evitar el corte de botones */
-            height: auto; 
-            max-height: 90vh; /* Máximo 90% del alto de la ventana */
+            height: 600px; /* Altura fija para el carrusel */
             overflow: hidden;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
             background-color: white;
@@ -33,8 +31,6 @@
         .slides {
             display: flex;
             transition: transform 0.5s ease-in-out;
-            /* Usamos overflow-y para que las diapositivas sean scrollables si el contenido es demasiado alto */
-            overflow-y: auto; 
             height: 100%;
         }
         .slide {
@@ -102,22 +98,15 @@
             background-color: #9ca3af; /* gray-400 */
             cursor: not-allowed;
         }
-
-        /* CLASE ACTUALIZADA PARA IMÁGENES EXPLICATIVAS (Máximo 300px) */
-        .slide-image {
-            max-width: 300px; 
-            max-height: 300px;
-            width: 100%; 
-            height: auto;
-            object-fit: contain;
+        .slide img {
             background-color: #e2e8f0; 
-            border-radius: 8px;
-            margin-bottom: 1.5rem;
+            border-radius: 8px; 
+            object-fit: contain;
         }
-        
-        /* Responsiveness adjustments for mobile */
+
         @media (max-width: 640px) {
             .slide-container {
+                height: auto;
                 min-height: 550px;
                 padding: 10px;
             }
@@ -133,10 +122,6 @@
             .slide p, .slide ul {
                 font-size: 1rem;
             }
-            .slide-image {
-                max-width: 200px; 
-                max-height: 200px;
-            }
         }
     </style>
 </head>
@@ -148,7 +133,7 @@
         <!-- Diapositiva 1: Título -->
         <div class="slide bg-gradient-to-br from-emerald-50 to-white">
             <div class="slide-content">
-                <img src="imagen1.jpg" alt="Ilustración de un cerebro humano superpuesto con un perfil humano." class="slide-image mb-4">
+                <img src="imagen1.jpg" alt="Ilustración de un cerebro humano superpuesto con un perfil humano." class="w-20 h-20 mb-4 text-emerald-500">
                 <h1 class="text-5xl text-gray-900 font-extrabold">Neurobiología y Ética</h1>
                 <h2 class="text-2xl text-emerald-700 font-semibold mt-2">La Base Científica de la Intervención Psicológica</h2>
                 <p class="text-gray-500 mt-4 italic">Análisis del Incidente Crítico sobre Pseudociencias en Neurodesarrollo Infantil</p>
@@ -161,13 +146,13 @@
             <div class="slide-content">
                 <h1 class="text-emerald-600">Propósito de la Presentación</h1>
                 <ul class="text-xl mt-6">
-                    <li>**Integrar:** Conocimientos sobre las bases biológicas de la conducta.</li>
-                    <li>**Analizar:** Un incidente crítico sobre la proliferación de pseudociencias.</li>
-                    <li>**Argumentar:** La necesidad de una intervención psicológica científica y ética.</li>
-                    <li>**Meta:** Fortalecer el pensamiento crítico y la práctica informada en psicología.</li>
+                    <li>Integrar: Conocimientos sobre las bases biológicas de la conducta.</li>
+                    <li>Analizar: Un incidente crítico sobre la proliferación de pseudociencias.</li>
+                    <li>Argumentar: La necesidad de una intervención psicológica científica y ética.</li>
+                    <li>Meta: Fortalecer el pensamiento crítico y la práctica informada en psicología.</li>
                 </ul>
             </div>
-            <img src="imagen2.jpg" alt="Un documento o informe y un lápiz, simbolizando planificación y objetivos." class="slide-image">
+            <img src="imagen2.jpg" alt="Un documento o informe y un lápiz, simbolizando planificación y objetivos." class="w-12 h-12 text-blue-500">
         </div>
 
         <!-- Diapositiva 3: El Incidente Crítico -->
@@ -175,12 +160,12 @@
             <div class="slide-content">
                 <h1 class="text-red-600">El Incidente Crítico: Riesgo y Vulnerabilidad</h1>
                 <ul class="text-xl mt-6">
-                    <li>**Contexto:** Colaboración en un centro de atención a niños con trastornos del neurodesarrollo.</li>
-                    <li>**Problema:** Proliferación de terapias alternativas/pseudocientíficas sin sustento.</li>
-                    <li>**Rol:** Proponer estrategias informadas y éticas como psicólogo en formación.</li>
+                    <li>Contexto: Colaboración en un centro de atención a niños con trastornos del neurodesarrollo.</li>
+                    <li>Problema: Proliferación de terapias alternativas/pseudocientíficas sin sustento.</li>
+                    <li>Rol: Proponer estrategias informadas y éticas como psicólogo en formación.</li>
                 </ul>
             </div>
-            <img src="imagen3.jpg" alt="Señal de advertencia triangular con un signo de exclamación." class="slide-image">
+            <img src="imagen3.jpg" alt="Señal de advertencia triangular con un signo de exclamación." class="w-12 h-12 text-red-500">
         </div>
 
         <!-- Diapositiva 4: Riesgos de la Pseudociencia -->
@@ -188,13 +173,13 @@
             <div class="slide-content">
                 <h1 class="text-red-600">Pseudociencias: Riesgos en Población Infantil</h1>
                 <ul class="text-xl mt-6">
-                    <li>**Riesgo 1: Demora en la Intervención:** Posponer tratamientos validados.</li>
-                    <li>**Riesgo 2: Daño Económico y Emocional:** Gasto de recursos y frustración familiar.</li>
-                    <li>**Riesgo 3: Pérdida de Confianza:** Descrédito de la psicología científica.</li>
-                    <li>**Riesgo 4: Intervenciones Invasivas:** Aplicación de métodos peligrosos o ineficaces.</li>
+                    <li>Riesgo 1: Demora en la Intervención: Posponer tratamientos validados.</li>
+                    <li>Riesgo 2: Daño Económico y Emocional: Gasto de recursos y frustración familiar.</li>
+                    <li>Riesgo 3: Pérdida de Confianza: Descrédito de la psicología científica.</li>
+                    <li>Riesgo 4: Intervenciones Invasivas: Aplicación de métodos peligrosos o ineficaces.</li>
                 </ul>
             </div>
-            <img src="imagen4.jpg" alt="Reloj con manecillas rotas, simbolizando tiempo de desarrollo perdido." class="slide-image">
+            <img src="imagen4.jpg" alt="Reloj con manecillas rotas, simbolizando tiempo de desarrollo perdido." class="w-12 h-12 text-gray-500"> <!-- Icono de reloj (tiempo perdido) -->
         </div>
 
         <!-- Diapositiva 5: Células Gliales (M2) -->
@@ -202,12 +187,12 @@
             <div class="slide-content">
                 <h1 class="text-emerald-600">Fundamentos Biológicos I: Células Gliales (M2)</h1>
                 <ul class="text-xl mt-6">
-                    <li>**Función Clave:** Soporte metabólico y estructural de neuronas (Astrocitos, Oligodendrocitos).</li>
-                    <li>**Desarrollo Infantil:** La **mielinización** (Oligodendrocitos) es crucial para la velocidad de procesamiento.</li>
-                    <li>**Conexión con el Problema:** Deficiencias en el soporte glial pueden estar relacionadas con algunos trastornos del neurodesarrollo.</li>
+                    <li>Función Clave: Soporte metabólico y estructural de neuronas (Astrocitos, Oligodendrocitos).</li>
+                    <li>Desarrollo Infantil: La mielinización (Oligodendrocitos) es crucial para la velocidad de procesamiento.</li>
+                    <li>Conexión con el Problema: Deficiencias en el soporte glial pueden estar relacionadas con algunos trastornos del neurodesarrollo.</li>
                 </ul>
             </div>
-            <img src="imagen5.jpg" alt="Esquema simple de una célula glial (Oligodendrocito) envolviendo un axón." class="slide-image">
+            <img src="imagen5.jpg" alt="Esquema simple de una célula glial (Oligodendrocito) envolviendo un axón." class="w-16 h-16 text-emerald-500"> <!-- Imagen de Célula Glial -->
         </div>
 
         <!-- Diapositiva 6: Comunicación Sináptica (M3) -->
@@ -215,12 +200,12 @@
             <div class="slide-content">
                 <h1 class="text-emerald-600">Fundamentos Biológicos II: Comunicación Sináptica (M3)</h1>
                 <ul class="text-xl mt-6">
-                    <li>**Función Clave:** Base de la plasticidad neuronal, el aprendizaje y la memoria.</li>
-                    <li>**Desarrollo Infantil:** Desequilibrios en neurotransmisores (ej. Dopamina, Serotonina) se asocian a TDAH y TEA.</li>
-                    <li>**Conexión con el Problema:** Las intervenciones científicas buscan modular circuitos sinápticos específicos (farmacológicas o conductuales).</li>
+                    <li>Función Clave: Base de la plasticidad neuronal, el aprendizaje y la memoria.</li>
+                    <li>Desarrollo Infantil: Desequilibrios en neurotransmisores (ej. Dopamina, Serotonina) se asocian a TDAH y TEA.</li>
+                    <li>Conexión con el Problema: Las intervenciones científicas buscan modular circuitos sinápticos específicos (farmacológicas o conductuales).</li>
                 </ul>
             </div>
-            <img src="imagen6.jpg" alt="Ilustración de una sinapsis neuronal con vesículas liberando neurotransmisores." class="slide-image">
+            <img src="imagen6.jpg" alt="Ilustración de una sinapsis neuronal con vesículas liberando neurotransmisores." class="w-16 h-16 text-yellow-500"> <!-- Imagen de Sinapsis -->
         </div>
 
         <!-- Diapositiva 7: Regiones Cerebrales (M4) -->
@@ -228,12 +213,12 @@
             <div class="slide-content">
                 <h1 class="text-emerald-600">Fundamentos Biológicos III: Regiones Cerebrales y Función (M4)</h1>
                 <ul class="text-xl mt-6">
-                    <li>**Función Clave:** **Corteza Prefrontal (CPF)**: Control ejecutivo, atención sostenida y planificación.</li>
-                    <li>**Desarrollo Infantil:** La CPF madura lentamente, siendo clave en los trastornos de atención (TDAH).</li>
-                    <li>**Conexión con el Problema:** El psicólogo diseña estrategias conductuales para modificar las funciones de la CPF (ej. TCC).</li>
+                    <li>Función Clave: Corteza Prefrontal (CPF): Control ejecutivo, atención sostenida y planificación.</li>
+                    <li>Desarrollo Infantil: La CPF madura lentamente, siendo clave en los trastornos de atención (TDAH).</li>
+                    <li>Conexión con el Problema: El psicólogo diseña estrategias conductuales para modificar las funciones de la CPF (ej. TCC).</li>
                 </ul>
             </div>
-            <img src="imagen7.jpg" alt="Diagrama de un cerebro humano resaltando la Corteza Prefrontal." class="slide-image">
+            <img src="imagen7.jpg" alt="Diagrama de un cerebro humano resaltando la Corteza Prefrontal." class="w-16 h-16 text-purple-500"> <!-- Imagen de CPF -->
         </div>
 
         <!-- Diapositiva 8: Ejemplos de Prácticas -->
@@ -247,11 +232,11 @@
                 </ul>
                 <h2 class="text-emerald-500 mt-6">Intervenciones Validadas (Ejemplos):</h2>
                 <ul class="text-xl max-w-sm">
-                    <li>Análisis Conductual Aplicado (**ABA**).</li>
-                    <li>Terapia Cognitivo-Conductual (**TCC**).</li>
+                    <li>Análisis Conductual Aplicado (ABA).</li>
+                    <li>Terapia Cognitivo-Conductual (TCC).</li>
                 </ul>
             </div>
-            <img src="imagen8.jpg" alt="Balanza comparando un lado con evidencia (ciencia) y otro sin evidencia (pseudociencia)." class="slide-image">
+            <img src="imagen8.jpg" alt="Balanza comparando un lado con evidencia (ciencia) y otro sin evidencia (pseudociencia)." class="w-12 h-12 text-gray-700"> <!-- Imagen de Balanza -->
         </div>
 
         <!-- Diapositiva 9: Diferenciación de Enfoques -->
@@ -259,12 +244,12 @@
             <div class="slide-content">
                 <h1 class="text-emerald-600">La Distinción Fundamental</h1>
                 <ul class="text-xl mt-6">
-                    <li>**Psicología Científica:** Se basa en el **Método Científico** (experimentación, replicabilidad).</li>
-                    <li>**Pseudociencia:** Carece de evidencia empírica, no es falsable, se basa en anécdotas o testimonios.</li>
-                    <li>**Criterio de Validez:** Una intervención es válida si demuestra **eficacia** en ensayos clínicos controlados.</li>
+                    <li>Psicología Científica: Se basa en el Método Científico (experimentación, replicabilidad).</li>
+                    <li>Pseudociencia: Carece de evidencia empírica, no es falsable, se basa en anécdotas o testimonios.</li>
+                    <li>Criterio de Validez: Una intervención es válida si demuestra eficacia en ensayos clínicos controlados.</li>
                 </ul>
             </div>
-            <img src="imagen9.jpg" alt="Un gráfico de barras con resultados medibles, simbolizando evidencia científica." class="slide-image">
+            <img src="imagen9.jpg" alt="Un gráfico de barras con resultados medibles, simbolizando evidencia científica." class="w-12 h-12 text-blue-700"> <!-- Imagen de Gráfico/Datos -->
         </div>
 
         <!-- Diapositiva 10: Conclusiones y Ética -->
@@ -272,12 +257,12 @@
             <div class="slide-content">
                 <h1 class="text-emerald-600">Conclusión: Rol Científico y Responsabilidad Ética</h1>
                 <ul class="text-xl mt-6">
-                    <li>**Rol del Psicólogo:** Ser un agente de salud que integra la teoría biológica y la práctica basada en evidencia.</li>
-                    <li>**Responsabilidad Ética:** El código ético obliga a usar solo procedimientos validados y a no exponer al paciente a riesgos.</li>
-                    <li>**Reflexión Final:** La neurobiología es el **cimiento de nuestra credibilidad** profesional y clínica.</li>
+                    <li>Rol del Psicólogo: Ser un agente de salud que integra la teoría biológica y la práctica basada en evidencia.</li>
+                    <li>Responsabilidad Ética: El código ético obliga a usar solo procedimientos validados y a no exponer al paciente a riesgos.</li>
+                    <li>Reflexión Final: La neurobiología es el cimiento de nuestra credibilidad profesional y clínica.</li>
                 </ul>
             </div>
-            <img src="imagen10.jpg" alt="Una brújula o un mapa señalando la dirección ética y científica." class="slide-image">
+            <img src="imagen10.jpg" alt="Una brújula o un mapa señalando la dirección ética y científica." class="w-12 h-12 text-yellow-700"> <!-- Imagen de Brújula -->
         </div>
 
         <!-- Diapositiva 11: Referencias -->
@@ -287,11 +272,11 @@
                 <ul class="text-sm mt-6 list-disc list-inside space-y-3 px-4">
                     <li class="text-gray-600 text-left">Bear, M. F. et al. (2016). *Neurociencia: La exploración del cerebro*. Wolters Kluwer.</li>
                     <li class="text-gray-600 text-left">Carlson, N. R. (2014). *Fisiología de la conducta* (11ª ed., pp. 459-490). Pearson.</li>
-                    <li class="text-gray-600 text-left">Kandel, E. R. et al. (2001). *Principios de Neurociencia* (4 ed., pp. 4-20). McGraw-Hill Interamericana.</li>
-                    <li class="text-gray-600 text-left">Bunge, M. (2013). *La ciencia: Su método y su filosofía*. Editorial Sudamericana.</li>
+                    <li class="text-gray-600 text-left">Kandel, E. R. et al. (2001). *Principios de Neurociencia* (4 ed., pp. 4-20). McGraw-Hill Interamericana. https://reviewbooku.com/review/kandel-principios-de-neurociencia-4-4942842</li>
+                    <li class="text-gray-600 text-left italic">Bunge, M. (2013). La ciencia: Su método y su filosofía. Editorial Sudamericana. https://posgrado.unam.mx/musica/lecturas/LecturaIntroduccionInvestigacionMusical/epistemologia/Mario-Bunge-la-Ciencia-su-Metodo-y-Filosofia.pdf.</li>
                 </ul>
             </div>
-            <img src="imagen11.jpg" alt="Pila de libros o una biblioteca, representando las fuentes académicas." class="slide-image">
+            <img src="imagen11.jpg" alt="Pila de libros o una biblioteca, representando las fuentes académicas." class="w-12 h-12 text-gray-500"> <!-- Imagen de Libros/Referencias -->
         </div>
         
     </div>
